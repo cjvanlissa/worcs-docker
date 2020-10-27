@@ -1,3 +1,3 @@
-FROM rocker/tidyverse:3.6.3
+FROM rocker/verse:3.6.3
 RUN installGithub.r  --deps TRUE --update FALSE \
     cjvanlissa/worcs
