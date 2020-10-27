@@ -1,3 +1,6 @@
 FROM rocker/verse:3.6.3
-RUN installGithub.r  --deps TRUE --update FALSE \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    libgit2-dev \
+    && installGithub.r --deps TRUE --update FALSE \
     cjvanlissa/worcs crsh/papaja
